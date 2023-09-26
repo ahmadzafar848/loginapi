@@ -24,12 +24,12 @@ class LoginActivity : AppCompatActivity() {
 
 
     }
-    fun isEmailValid(email: String): Boolean {
+    private fun isEmailValid(email: String): Boolean {
         val regex = Regex("^\\S+@\\S+\\.\\S+\$")
         return regex.matches(email)
     }
 
-    fun handleLoginClickListener(){
+    private fun handleLoginClickListener(){
         val indicator=findViewById<ProgressBar>(R.id.cpIndicator)
         val btnLogin=findViewById<Button>(R.id.btnLogin)
         val etEmail=findViewById<EditText>(R.id.etEmail)
@@ -42,6 +42,7 @@ class LoginActivity : AppCompatActivity() {
             }else if (!isEmailValid(etEmail.text.toString())){
                 Toast.makeText(this, "Email is invalid", Toast.LENGTH_SHORT).show()
             }else{
+                //hi
                 indicator.visibility=View.VISIBLE
                 loginViewModel.login(etEmail.text.toString(),etPassword.text.toString())
             }

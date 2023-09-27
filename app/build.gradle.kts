@@ -50,6 +50,8 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
     //koin di
     implementation ("io.insert-koin:koin-android:3.5.0")
+    //chucker
+    implementation ("com.github.chuckerteam.chucker:library:3.5.2")
 
 
     implementation("androidx.core:core-ktx:1.9.0")
